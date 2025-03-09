@@ -1,0 +1,180 @@
+baseURL: https://example.org/
+title: Zhiqin's Blog
+pagination.pagerSizepaginate: 10
+theme: ["PaperMod"]
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minifyOutput: true
+
+googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # 用于控制环境相关的特性
+  title: "Zhiqin的博客"
+  description: "这是Zhiqin的个人博客，分享编程、技术和生活体验"
+  keywords: [博客, 技术, 编程, Hugo, PaperMod]
+  author: "Me"
+  DateFormat: "2006-01-02" # 日期格式
+  defaultTheme: auto # 默认主题: auto, light, dark
+  disableThemeToggle: false # 是否禁用主题切换按钮
+  
+  ShowReadingTime: true # 显示阅读时间
+  ShowShareButtons: true # 显示分享按钮
+  ShareButtons: ["linkedin", "twitter"] 
+  ShowPostNavLinks: true # 显示上一篇/下一篇导航
+  ShowBreadCrumbs: true # 显示面包屑导航
+  ShowCodeCopyButtons: true # 显示代码复制按钮
+  ShowRssButtonInSectionTermList: true # 在分类列表页面显示 RSS 按钮
+  ShowFullTextinRSS: true # 在 RSS 中显示全文
+  comments: true
+  
+  disableSpecial1stPost: false # 禁用第一篇文章的特殊样式
+  disableScrollToTop: false # 禁用返回顶部按钮
+  hidemeta: false # 隐藏文章元信息
+  hideSummary: false # 隐藏文章摘要
+  showtoc: true # 显示文章目录
+  tocopen: false # 默认展开目录
+
+  homeInfoParams:
+    Title: Hi there wave
+    Content: Can be Info, links, about...
+
+  socialIcons: # optional
+    - name: "<platform>"
+      url: "<link>"
+    - name: "<platform 2>"
+      url: "<link2>"
+
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/hnkjdaxzzq"
+    - name: twitter
+      url: "https://twitter.com/yourusername"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/yourusername"
+    - name: email
+      url: "mailto:your@email.com"
+    - name: rss
+      url: "index.xml"
+
+  fuseOpts:
+    isCaseSensitive: false # 是否区分大小写
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+  ShowAllPagesInArchive: true # 在归档页面显示所有文章
+  
+  # 标签云配置
+  tagCloud:
+    enabled: true
+    minFontSize: 0.8
+    maxFontSize: 2
+
+
+  # Open Graph / Twitter Card 元数据
+  images: ["/images/site-feature-image.jpg"]
+  
+  # SEO 元数据
+  author: "zhiqin"
+  
+  # JSON-LD 结构化数据
+  enableEmoji: true
+  
+  # 站点验证
+  analytics:
+    google:
+      SiteVerificationTag: "googlexxx"
+    bing:
+      SiteVerificationTag: "bingxxx"
+    yandex:
+      SiteVerificationTag: "yandexxx"
+
+menu:
+  main:
+    - identifier: home
+      name: 首页
+      url: /
+      weight: 10
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 20
+    - identifier: categories
+      name: 分类
+      url: /categories/
+      weight: 30
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 40
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 50
+    - identifier: about
+      name: 关于
+      url: /about/
+      weight: 60
+
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # 必须添加以支持搜索
+
+# 语法高亮配置
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
+
+# languages:
+#   en:
+#     languageName: "English"
+#     weight: 1
+#     taxonomies:
+#       category: categories
+#       tag: tags
+#       series: series
+#     menu:
+#       main:
+#         - name: Archive
+#           url: archives
+#           weight: 5
+#         - name: Search
+#           url: search/
+#           weight: 10
+
+#   zh:
+#     languageName: "中文"
+#     weight: 2
+#     taxonomies:
+#       category: categories
+#       tag: tags
+#       series: series
+#     menu:
+#       main:
+#         - name: 归档
+#           url: archives
+#           weight: 5
+#         - name: 搜索
+#           url: search/
+#           weight: 10
