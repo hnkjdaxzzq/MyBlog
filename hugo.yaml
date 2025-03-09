@@ -1,7 +1,9 @@
-baseURL: https://example.org/
+baseURL: https://zhiqinblog.pages.dev/
 title: Zhiqin's Blog
 pagination.pagerSizepaginate: 10
 theme: ["PaperMod"]
+frontmatter:
+  format: yaml
 
 enableRobotsTXT: true
 buildDrafts: false
